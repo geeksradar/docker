@@ -1,7 +1,7 @@
 #! /bin/bash
 # Cloud Functions
 # Initializing Configuration
-gcloud init < a
+#gcloud init < a
 
 export IMAGE_FAMILY="windows-2012-r2-core"
 export ZONE="us-central1-a"
