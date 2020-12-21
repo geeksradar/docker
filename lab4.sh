@@ -1,9 +1,10 @@
 #! /bin/bash
 # Cloud Functions
 # Initializing Configuration
-gcloud init < a
+#gcloud init < a
 
 ID=$(gcloud info --format='value(config.project)')
+gcloud config set project $ID
 export INSTANCE_NAME="dev-instance"
 export ZONE="us-central1-a"
 gcloud compute firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
